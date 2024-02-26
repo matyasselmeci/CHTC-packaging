@@ -1,0 +1,12 @@
+_build_results
+_final_srpm_contents
+_upstream_srpm_contents
+_upstream_tarball_contents
+_quilt
+*.tar
+*.tar.gz
+*.tar.bz2
+*.tar.xz
+*.tar.zstd
+*.rpm
+*.zip
