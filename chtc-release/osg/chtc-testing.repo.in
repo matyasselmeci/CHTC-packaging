@@ -1,0 +1,8 @@
+[chtc-testing]
+name=CHTC Software for Enterprise Linux <RHEL> - Testing Repository - $basearch
+baseurl=https://koji.osg-htc.org/mnt/koji/repos/chtc-el<RHEL>-testing/latest/$basearch/
+priority=97
+enabled=0
+gpgcheck=0
+#gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CHTC
+
