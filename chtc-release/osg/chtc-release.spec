@@ -14,7 +14,7 @@ Source0:        chtc-development.repo.in
 Source1:        chtc-testing.repo.in
 Source2:        chtc.repo.in
 
-#Source41:       RPM-GPG-KEY-CHTC
+Source41:       RPM-GPG-KEY-CHTC
 
 Requires:       redhat-release >= %{rhel}
 
@@ -35,10 +35,10 @@ done
 
 %install
 
-# #GPG Key
-# mkdir -p $RPM_BUILD_ROOT%{_sysconfdir}/pki/rpm-gpg
-# install -pm 644 %{SOURCE41} \
-#     $RPM_BUILD_ROOT%{_sysconfdir}/pki/rpm-gpg/RPM-GPG-KEY-CHTC
+#GPG Key
+mkdir -p $RPM_BUILD_ROOT%{_sysconfdir}/pki/rpm-gpg
+install -pm 644 %{SOURCE41} \
+    $RPM_BUILD_ROOT%{_sysconfdir}/pki/rpm-gpg/RPM-GPG-KEY-CHTC
 
 # yum
 mkdir -p $RPM_BUILD_ROOT%{_sysconfdir}/yum.repos.d
@@ -48,7 +48,7 @@ install -m 644 *.repo $RPM_BUILD_ROOT%{_sysconfdir}/yum.repos.d
 %files
 %defattr(-,root,root,-)
 %config(noreplace) /etc/yum.repos.d/*
-# /etc/pki/rpm-gpg/RPM-GPG-KEY-CHTC
+/etc/pki/rpm-gpg/RPM-GPG-KEY-CHTC
 
 
 %changelog
