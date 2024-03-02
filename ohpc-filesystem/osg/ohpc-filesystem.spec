@@ -1,4 +1,4 @@
-%global ohpc_bootstrap 1
+%global ohpc_bootstrap 0
 #----------------------------------------------------------------------------bh-
 # This RPM .spec file is part of the OpenHPC project.
 #
@@ -13,7 +13,7 @@
 
 Name: ohpc-filesystem
 Version: 1.3
-Release: 1.0%{?dist}
+Release: 1.1%{?dist}
 Summary: Common top-level OpenHPC directories
 
 Group: ohpc/admin
