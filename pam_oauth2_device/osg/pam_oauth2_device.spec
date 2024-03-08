@@ -1,6 +1,5 @@
 # pam_oauth2_device version
 %define _version 0.1.3.chtc
-%define _lib /lib64
 
 
 Name:    pam_oauth2_device
@@ -40,9 +39,9 @@ make
 
 
 %install
-mkdir -p ${RPM_BUILD_ROOT}%{_lib}/security
+mkdir -p ${RPM_BUILD_ROOT}%{_libdir}/security
 mkdir -p ${RPM_BUILD_ROOT}%{_sysconfdir}/pam_oauth2_device
-install pam_oauth2_device.so ${RPM_BUILD_ROOT}%{_lib}/security
+install pam_oauth2_device.so ${RPM_BUILD_ROOT}%{_libdir}/security
 cp config_template.json ${RPM_BUILD_ROOT}%{_sysconfdir}/pam_oauth2_device/config.json
 
 
@@ -52,7 +51,7 @@ cp config_template.json ${RPM_BUILD_ROOT}%{_sysconfdir}/pam_oauth2_device/config
 
 %files
 %doc LICENSE README.md
-%{_lib}/security/pam_oauth2_device.so
+%{_libdir}/security/pam_oauth2_device.so
 %config(noreplace) %{_sysconfdir}/pam_oauth2_device/config.json
 
 
