@@ -3,13 +3,13 @@
 %define _lib /lib64
 
 
-Name:    pamoauth2device
+Name:    pam_oauth2_device
 Version: %{_version}
 Release: 1%{?dist}
 Summary: PAM module for OAuth 2.0 Device flow
 License: Apache-2.0
-URL:     https://github.com/stfc/pam_oauth2_device/
-Source0: https://github.com/stfc/pam_oauth2_device/archive/v%{_version}.tar.gz
+URL:     https://github.com/CHTC/pam_oauth2_device/
+Source0: https://github.com/CHTC/pam_oauth2_device/archive/v%{_version}.tar.gz
 
 
 # List of build-time dependencies:
@@ -57,6 +57,9 @@ cp config_template.json ${RPM_BUILD_ROOT}%{_sysconfdir}/pam_oauth2_device/config
 
 
 %changelog
+* Thu Mar 07 2024 Mátyás Selmeci <matyas@cs.wisc.edu> - 0.1.3.chtc-1
+- Rename to pam_oauth2_device; build in Koji (INF-1663)
+
 * Mon Aug 7 2023 Brian Lin <blin@cs.wisc.edu> - 0.1.3.chtc
 - Allow the name claim to be configurable (INF-748)
 
