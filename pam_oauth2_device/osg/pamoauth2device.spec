@@ -10,6 +10,8 @@ License: Apache-2.0
 URL:     https://github.com/CHTC/pam_oauth2_device/
 Source0: https://github.com/CHTC/pam_oauth2_device/archive/v%{_version}.tar.gz
 
+Obsoletes: pamoauth2device <= 0.1.3.chtc
+Provides: pamoauth2device = %{version}-%{release}
 
 # List of build-time dependencies:
 BuildRequires: gcc
